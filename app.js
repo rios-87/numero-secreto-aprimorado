@@ -1,7 +1,7 @@
 
 //sortear(): Essa função é responsável por sortear uma quantidade específica de números aleatórios dentro de um intervalo definido pelo usuário.
 function sortear() { 
-let quatidadeDeNumeros = parseInt (document.getElementById('quantidade').value); // parseInt() garante que os valores capturados sejam convertidos para números inteiros
+let quantidadeDeNumeros = parseInt (document.getElementById('quantidade').value); // parseInt() garante que os valores capturados sejam convertidos para números inteiros
 let numeroInicial = parseInt (document.getElementById('de').value);
 let numeroFinal = parseInt (document.getElementById('ate').value);
 
@@ -11,7 +11,7 @@ let numero;        // Será utilizado para armazenar temporariamente os valores 
 //FOR: Loop para gerar números aleatórios
 //O loop "for" executa um número de vezes igual ao valor inserido pelo usuário (quantidade de números a sortear).
 
-for (let i = 0; i < quatidadeDeNumeros; i++){
+for (let i = 0; i < quantidadeDeNumeros; i++){
   numero = gerarNumeroAleatorio(numeroInicial,numeroFinal);
   //sorteados.push(numero);
 
@@ -43,10 +43,10 @@ function alterarStatusBotao() {
   }
 }
 
-function reiniciar() {
-  document.getElementById('quatidadeDeNumeros').value = '';
-  document.getElementById('numeroInicial').value = '';
-  document.getElementById('numeroFinal').value = '';
+function reiniciar () {
+  document.getElementById('quantidade').value ='';
+  document.getElementById('de').value ='';
+  document.getElementById('ate').value ='';
   document.getElementById('resultado').innerHTML = '<label class="texto__paragrafo">Números sorteados: nenhum até agora</label>';
   alterarStatusBotao();
 }
