@@ -8,10 +8,14 @@ let numeroFinal = parseInt (document.getElementById('ate').value);
 let sorteados =[]; // É um array onde os números sorteados serão armazenados.
 let numero;        // Será utilizado para armazenar temporariamente os valores gerados.
 
-if (numeroInicial >= numeroFinal) {
-  alert (`O número inicial é maior que o número Final, por gentileza, informar um valor menor no campo:"Do número"!`);
-} else {quantidadeDeNumerosSorteados();  }
-
+if (quantidadeDeNumeros > numeroFinal ) {
+  alert (`O valor informado no campo "Quantidade de Números" não pode ser maior ao valor final informado!`);
+}  else {
+  if (numeroInicial >= numeroFinal) {
+    alert (`O número inicial é maior ou igual ao número final. Por gentileza, informe um valor menor no campo "Do número". `);
+  } 
+  quantidadeDeNumerosSorteados(); 
+} 
 
 function quantidadeDeNumerosSorteados() {
 //FOR: Loop para gerar números aleatórios
